@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: hsl(0, 0%, 96%);
+    color: hsl(0, 0%, 7%);
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 83px 16px;
+}
+
+.grid-content {
+    width: 100%;
+    max-width: 1120px;
+    display: grid;
+    grid-template-areas: 
+        "cardGroup card-1 card-1 card-4"
+        "cardGroup card-2 card-3 card-4"
+        "cardGroup card-6 card-5 card-5";
+    grid-template-columns: repeat(4, minmax(min-content, 256px));
+    grid-template-rows: 323px 247px 247px;
+    gap: 32px;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1, .title-2, .title-3, .title-4 {
+    line-height: 95%;
+    font-weight: 500;
+}
+
+.title-2 {
+    font-size: 40px;
+}
+
+.title-3 {
+    font-size: 35px;
+}
+
+.title-4 {
+    font-size: 30px;
+}
+
+.italicText {
+    font-style: italic;
+}
+
+.colorText {
+    color: hsl(39, 100%, 71%);
+}
+
+/* Card 1 */
+.card-1 {
+    background-color: hsl(256, 67%, 59%);
+    grid-area: card-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-1 h1 {
+    font-size: 60px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.card-1 .image {
+    max-width: 190px;
+    margin: 22px 0 0;
+}
+
+.card-1 p {
+    color: hsl(31, 66%, 93%);
+}
+
+/* Card 2 */
+.card-2 {
+    grid-area: card-2;
+    background-color: hsl(0, 0%, 100%);
+    padding: 24px 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-2 .image {
+    background: url(assets/images/illustration-multiple-platforms.webp) top left no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 68px;
+}
+
+.card-2 .title-4 {
+    margin-top: 20px;
+    margin-right: 24px;
+}
+
+/* Card 3 */
+.card-3 {
+    background-color: hsl(39, 100%, 71%);
+    grid-area: card-3;
+    padding: 24px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-3 .image {
+    background: url(assets/images/illustration-consistent-schedule.webp) top left no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 94px;
+    margin-top: 14px;
+}
+
+/* Card 4 */
+.card-4 {
+    background-color: hsl(254, 88%, 90%);
+    color: hsl(0, 0%, 7%);
+    grid-area: card-4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 24px 32px;
+}
+
+.card-4 p {
+    margin-right: 30px;
+    line-height: 115%;
+    margin-top: 10px;
+}
+
+.card-4 .image {
+    width: 100%;
+    margin: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.card-4 img {
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Card 5 */
+.card-5 {
+    background-color: hsl(256, 67%, 59%);
+    color: hsl(0, 0%, 100%);
+    grid-area: card-5;
+    display: flex;
+    align-items: center;
+    padding: 22px 24px;
+    gap: 12px;
+}
+
+.card-5 .title-2 {
+    flex: 2;
+    line-height: 90%;
+}
+
+.card-5 .image-wrapper {
+    flex: 1;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-5 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Card 6 */
+.card-6 {
+    grid-area: card-6;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 24px 20px;
+}
+
+.card-6 .precent {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.card-6 .image {
+    width: 100%;
+    max-width: 180px;
+    align-self: center;
+}
+
+/* Card Group */
+#cardGroup {
+    grid-area: cardGroup;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#cardGroup .card {
+    flex: 1;
+}
+
+/* Card 7 */
+.card-7 {
+    background-color: hsl(31, 66%, 93%);
+    grid-area: card-7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 22px;
+}
+
+.card-7 .title-3 {
+    line-height: 105%;
+    text-align: center;
+}
+
+.card-7 .image {
+    width: 100%;
+    max-width: 190px;
+}
+
+/* Card 8 */
+.card-8 {
+    background-color: hsl(39, 100%, 71%);
+    grid-area: card-8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px 24px 20px;
+}
+
+.card-8 .title-3 {
+    margin-right: 24px;
+    line-height: 100%;
+}
+
+.card-8 .image {
+    width: 100%;
+    max-width: 220px;
+    align-self: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .grid-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "card-1 card-1"
+            "card-2 card-3"
+            "card-4 card-4"
+            "card-6 card-5"
+            "cardGroup cardGroup";
+        grid-template-rows: auto;
+    }
+    
+    #cardGroup {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-content {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4"
+            "card-5"
+            "card-6"
+            "cardGroup";
+    }
+    
+    #cardGroup {
+        flex-direction: column;
+    }
+    
+    .card-5 {
+        flex-direction: column;
+    }
+    
+    .card-5 .image-wrapper {
+        margin-bottom: 15px;
+    }
+} 
+  
